@@ -1,0 +1,146 @@
+@keyframes growProgressBar {
+  0%,
+  33% {
+    --pgPercentage: 0;
+  }
+  100% {
+    --pgPercentage: var(--value);
+  }
+}
+
+@property --pgPercentage {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 5;
+}
+
+div[role="progressbar"] {
+  --size: 8rem;
+  --fg: #e61d2b;
+  --bg: #def;
+  --pgPercentage: var(--value);
+  animation: growProgressBar 3s 1 forwards;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(
+      closest-side,
+      white 80%,
+      transparent 0 99.9%,
+      white 0
+    ),
+    conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0);
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: calc(var(--size) / 5);
+  color: var(--fg);
+}
+
+div[role="progressbar"]::before {
+  counter-reset: percentage var(--value);
+}
+.borderBottom {
+  border-bottom: solid 1px;
+}
+
+.btn-outline-red {
+  border-color: #e61d2b !important;
+  color: white;
+  background-color: #e61d2b;
+}
+
+i {
+  color: #e61d2b;
+}
+P {
+  font-weight: bolder;
+  font-size: 0.8rem;
+}
+
+.Perform span {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.Yields span {
+  font-size: 0.8rem;
+  color: #e61d2b;
+  font-weight: bolder;
+}
+.Yields small {
+  font-weight: bold;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.chartBox {
+  padding: 20px;
+  border-radius: 10px;
+  border: solid 1px #e61d2b;
+  background: white;
+}
+
+.time-line-full {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 0px 10px;
+
+  .time-line-full-title {
+    line-height: 35px;
+    border-bottom: 1px solid rgb(220, 220, 220);
+    background-color: #fff;
+
+    svg {
+      margin: 0px 7px;
+    }
+  }
+  .line-name {
+    color: #2c3e50;
+    font-size: 0.75rem;
+    font-weight: bold;
+    position: relative;
+    top: -5px;
+  }
+  .progress {
+    height: 10px;
+  }
+  .time-line-full-body {
+    width: 100%;
+    height: calc(100% - 38px);
+
+    .time-line-position {
+      margin-top: 12px;
+    }
+    .time-line-full-title1 {
+      position: relative;
+      top: 38px;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    // .shift-top{
+    //   height: 60px !important;
+    // }
+  }
+
+  
+}
+
+::ng-deep.mat-form-field {
+  display: block;
+  position: relative;
+  flex: auto;
+  width: 150px!important;
+}
+
+@media screen and (max-width: 992px) {
+
+  .mat-form-field {
+    display: block;
+    position: relative;
+    flex: auto;
+    width: 250px!important;
+  }
+
+}

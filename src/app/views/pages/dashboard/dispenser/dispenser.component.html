@@ -1,0 +1,60 @@
+<app-dashbord-values></app-dashbord-values>
+<div class="row">
+    <div class="col-xl-7 grid-margin">
+      <div class="row">
+        <div class="col-12 grid-margin">
+          <div class="card">
+            <div class="card-body">
+              <h6 class="card-title">Dispensers</h6>
+                  <div class="row d-flex align-items-center justify-content-center py-2" *ngFor="let elem of GetStationDispensersData">
+                    <!--  -->
+                    <div class="col-md-2 p-0 w-100 h-100px rounded-circle d-flex align-items-center justify-content-center border border-dark solid">
+                      <small class="font-weight-bold"> {{elem.leftconsumptionValue.toFixed()}} EGP / {{elem.leftconsumption.toFixed()}} m<sup>3</sup>
+                      </small>
+                    </div>
+                    <!-- line -->
+                    <div class="col-md-1 p-0 w-100 bg-dark h-2px"></div>
+                    <!-- display -->
+                    <div class="col-md-2 px-0 py-2 w-100 d-flex align-items-center justify-content-center border border-dark">
+                      <span>{{elem.machineId}}</span>
+                    </div>
+                    <!-- line -->
+                    <div class="col-md-1 p-0 w-100 bg-dark h-2px"></div>
+                    <!--  -->
+                    <div class="col-md-2 p-0 w-100 h-100px rounded-circle d-flex align-items-center justify-content-center border border-dark solid">
+                      <small class="font-weight-bold"> {{elem.rightconsumptionValue.toFixed()}} EGP / {{elem.rightconsumption.toFixed()}} m<sup>3</sup>
+                      </small>
+                    </div>
+                  </div>
+                  <!--  -->
+      
+            </div>
+          </div>
+  
+        </div>
+        <!--  -->
+        
+      </div>
+    </div>
+
+    <div class="col-xl-5 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <h6 class="card-title">Radar chart</h6>
+            <apx-chart
+              [series]="radarChartOptions.series"
+              [chart]="radarChartOptions.chart"
+              [colors]="radarChartOptions.colors"
+              [stroke]="radarChartOptions.stroke"
+              [markers]="radarChartOptions.markers"
+              [fill]="radarChartOptions.fill"
+              [labels]="radarChartOptions.labels"
+              [legend]="radarChartOptions.legend"
+              [grid]="radarChartOptions.grid"
+            ></apx-chart>
+    
+          </div>
+        </div>
+      </div>
+      </div>
+  

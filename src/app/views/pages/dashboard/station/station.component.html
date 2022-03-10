@@ -1,0 +1,144 @@
+<app-dashbord-values></app-dashbord-values>
+  <div class="row">
+    <div class="col-md-12 p-3">
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-4 col-lg-3 col-xl-2 col-6">
+              <rg-gauge-chart
+                [canvasWidth]="canvasWidth"
+                [needleValue]="needleValue"
+                [centralLabel]="centralLabel"
+                [options]="options"
+                [name]="name"
+                [bottomLabel]="bottomLabel"
+              >
+              </rg-gauge-chart>
+            </div>
+            <div class="col-md-4 col-lg-3 col-xl-2 col-6">
+              <rg-gauge-chart
+                [canvasWidth]="canvasWidth"
+                [needleValue]="needleValue"
+                [centralLabel]="centralLabel"
+                [options]="options"
+                [name]="name"
+                [bottomLabel]="bottomLabel"
+              >
+              </rg-gauge-chart>
+            </div>
+            <div class="col-md-4 col-lg-3 col-xl-2 col-6">
+              <rg-gauge-chart
+                [canvasWidth]="canvasWidth"
+                [needleValue]="needleValue"
+                [centralLabel]="centralLabel"
+                [options]="options"
+                [name]="name"
+                [bottomLabel]="bottomLabel"
+              >
+              </rg-gauge-chart>
+            </div>
+            <div class="col-md-4 col-lg-3 col-xl-2 col-6">
+              <rg-gauge-chart
+                [canvasWidth]="canvasWidth"
+                [needleValue]="needleValue"
+                [centralLabel]="centralLabel"
+                [options]="options"
+                [name]="name"
+                [bottomLabel]="bottomLabel"
+              >
+              </rg-gauge-chart>
+            </div>
+            <div class="col-md-4 col-lg-3 col-xl-2 col-6">
+              <rg-gauge-chart
+                [canvasWidth]="canvasWidth"
+                [needleValue]="needleValue"
+                [centralLabel]="centralLabel"
+                [options]="options"
+                [name]="name"
+                [bottomLabel]="bottomLabel"
+              >
+              </rg-gauge-chart>
+            </div>
+            <div class="col-md-4 col-lg-3 col-xl-2 col-6">
+              <rg-gauge-chart
+                [canvasWidth]="canvasWidth"
+                [needleValue]="needleValue"
+                [centralLabel]="centralLabel"
+                [options]="options"
+                [name]="name"
+                [bottomLabel]="bottomLabel"
+              >
+              </rg-gauge-chart>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-body">
+          <h6 class="card-title">Mixed chart</h6>
+
+          <apx-chart
+            [series]="mixedChartOptions.series"
+            [chart]="mixedChartOptions.chart"
+            [xaxis]="mixedChartOptions.xaxis"
+            [yaxis]="mixedChartOptions.yaxis"
+            [grid]="mixedChartOptions.grid"
+            [labels]="mixedChartOptions.labels"
+            [markers]="mixedChartOptions.markers"
+            [legend]="mixedChartOptions.legend"
+            [stroke]="mixedChartOptions.stroke"
+            [fill]="mixedChartOptions.fill"
+            [tooltip]="mixedChartOptions.tooltip"
+          ></apx-chart>
+        </div>
+      </div>
+    </div>
+      </div>
+
+
+  <!-- dataTableExample -->  
+  <div class="row py-3">
+    <div class="col-md-12 stretch-card">
+      <div class="card">
+        <div class="card-body">
+          <h6 class="card-title">Data Table</h6>
+          <div class="table-responsive">
+            <table id="dataTableExample" class="table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Position</th>
+                  <th>Office</th>
+                  <th>Age</th>
+                  <th>Start date</th>
+                  <th>Salary</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="table-danger">
+                  <td>Tiger Nixon</td>
+                  <td>System Architect</td>
+                  <td>Edinburgh</td>
+                  <td>61</td>
+                  <td>2011/04/25</td>
+                  <td>$320,800</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

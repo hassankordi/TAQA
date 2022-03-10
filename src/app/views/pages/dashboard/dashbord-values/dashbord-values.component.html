@@ -1,0 +1,167 @@
+<div class="row">
+  <div class="col-xl-12 stretch-card">
+    <div class="card">
+      <div class="card-body p-1">
+        <div class="row d-flex">
+          <div class="col-md-3 d-flex">
+            <mat-form-field class="w-100">
+              <mat-label>Plant</mat-label>
+              <mat-select>
+                <mat-option> </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+
+          <div class="col-md-3 d-flex">
+            <mat-form-field class="w-100">
+              <mat-label>All Lines</mat-label>
+              <mat-select>
+                <mat-option> </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="col-md-3 d-flex">
+            <mat-form-field>
+              <mat-date-range-input
+                class="bg-outline-red"
+                [formGroup]="range"
+                [rangePicker]="picker"
+              >
+                <input
+                  matStartDate
+                  formControlName="start"
+                  placeholder="Start date"
+                  (dateChange)="fromDate($event)"
+                />
+                <input
+                  matEndDate
+                  formControlName="end"
+                  placeholder="End date"
+                  (dateChange)="fromDate2($event)"
+                />
+              </mat-date-range-input>
+              <mat-datepicker-toggle
+                matSuffix
+                [for]="picker"
+              ></mat-datepicker-toggle>
+              <mat-date-range-picker #picker></mat-date-range-picker>
+              <mat-error
+                *ngIf="range.controls.start.hasError('matStartDateInvalid')"
+                >Invalid start date</mat-error
+              >
+              <mat-error
+                *ngIf="range.controls.end.hasError('matEndDateInvalid')"
+                >Invalid end date</mat-error
+              >
+            </mat-form-field>
+          </div>
+
+          <div class="mt-2 ml-3">
+            <button class="btn btn-outline-danger">Search</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="row pt-3">
+  <div class="col-12 col-xl-12 stretch-card">
+    <div class="row flex-grow">
+      <div class="col-md-3 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+         
+
+            <div class="row">
+              <div class="col-8 ">
+                <h2 class="card-title font-weight-bolder mb-0 h-50">Total Value</h2>
+                <h4 class="font-weight-bold val" name="totalValue">
+                  {{ totalDashboadObj?.totalValue | number: "" }}
+                </h4>
+              </div>
+              <div class="col-4 d-flex align-self-center">
+                <img src="assets/images/money.png" class="h-75 w-75" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+
+            <div class="row">
+              <div class="col-8 ">
+                <h2 class="card-title font-weight-bolder mb-0 h-50"> Total Sales</h2>
+                <h4 class="font-weight-bold val" name="totalValue">
+                  {{ totalDashboadObj?.totalSales | number: "" }}
+                </h4>
+              </div>
+              <div class="col-4 d-flex align-self-center">
+                <img src="assets/images/sales.png" class="h-75 w-75" />
+              </div>
+            </div>
+
+          
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+           
+
+
+
+            <div class="row">
+              <div class="col-8 ">
+                <h2 class="card-title font-weight-bolder mb-0 h-50">  Avg Sales (Today)</h2>
+                <h4 class="font-weight-bold val" name="totalValue">
+                  {{ totalDashboadObj?.avgSales | number: "" }}
+                </h4>
+              </div>
+              <div class="col-4 d-flex align-self-center">
+                <img src="assets/images/coupon.png" class="h-75 w-75" />
+              </div>
+            </div>
+
+
+
+
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+          
+            <div class="row">
+              <div class="col-8 ">
+                <h2 class="card-title font-weight-bolder mb-0 h-50"> Total Transaction</h2>
+                <h4 class="font-weight-bold val" name="totalValue">
+                  {{ totalDashboadObj?.totalTransactionCount | number: "" }}
+                </h4>
+              </div>
+              <div class="col-4 d-flex align-self-center">
+                <img src="assets/images/transaction.png" class="h-75 w-75" />
+              </div>
+            </div>
+
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

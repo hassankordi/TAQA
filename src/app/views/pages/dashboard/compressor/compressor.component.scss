@@ -1,0 +1,44 @@
+.rg-gauge-chart{
+    width: 100% !important;
+    margin: auto !important;
+}
+
+
+.table-container{
+    width: 100%;
+    table {
+        width: 100%;
+      }
+}
+
+
+.col-3 div {
+    border-radius: 3px;
+    cursor: pointer;
+}
+table {
+    width: 100%;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  td, th {
+    width: 15%;
+    font-weight: bold;
+  }
+  th {
+      font-weight: bold;
+      font-size: 16px;
+      color: #727cf5;
+  }
+
+  .make-gold {
+    background-color: gold
+}
+::ng-deep .mat-tab-body-content {
+  height: 100%;
+  overflow: hidden !important;
+}

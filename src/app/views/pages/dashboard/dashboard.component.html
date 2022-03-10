@@ -1,0 +1,92 @@
+<app-dashbord-values></app-dashbord-values>
+<div class="row">
+    <div class="col-xl-7 grid-margin stretch-card">
+      <mat-tab-group animationDuration="0ms" class="w-100" style="background-color: #eff7ff;" (focusChange)="DrawRadarWithClick($event)">
+        <mat-tab label="Sales">
+          <div class="card">
+          <div class="card-body">
+            <h6 class="card-title">Bar chart</h6>
+    
+            <apx-chart
+              [series]="barChartOptions.series"
+              [colors]="barChartOptions.colors"
+              [grid]="barChartOptions.grid"
+              [chart]="barChartOptions.chart"
+              [xaxis]="barChartOptions.xaxis"
+              [yaxis]="barChartOptions.yaxis"
+              [legend]="barChartOptions.legend"
+            >
+            </apx-chart>
+    
+          </div>
+        </div>
+        </mat-tab>
+        <mat-tab label="Transaction" >
+          <div class="card">
+          <div class="card-body">
+            <h6 class="card-title">Bar chart</h6>
+    
+            <apx-chart
+              [series]="barChartOptions2.series"
+              [colors]="barChartOptions2.colors"
+              [grid]="barChartOptions2.grid"
+              [chart]="barChartOptions2.chart"
+              [yaxis]="barChartOptions2.yaxis"
+              [xaxis]="barChartOptions2.xaxis"
+              [legend]="barChartOptions2.legend"
+            >
+          </apx-chart>
+    
+          </div>
+        </div>
+        </mat-tab>
+        <mat-tab label="Value">
+          <div class="card">
+          <div class="card-body">
+            <h6 class="card-title">Bar chart</h6>
+    
+            <apx-chart
+              [series]="barChartOptions3.series"
+              [colors]="barChartOptions3.colors"
+              [grid]="barChartOptions3.grid"
+              [chart]="barChartOptions3.chart"
+              [yaxis]="barChartOptions3.yaxis"
+
+              [xaxis]="barChartOptions3.xaxis"
+              [legend]="barChartOptions3.legend"
+            >
+            </apx-chart>
+    
+          </div>
+        </div>
+        </mat-tab>
+      </mat-tab-group>
+        
+      </div>
+  
+      <div class="col-xl-5 grid-margin stretch-card ">
+        <div class="card">
+          <div class="card-body">
+            <h6 class="card-title">Radar chart</h6>
+            
+            <apx-chart
+            *ngIf="dataOfRadar != null"
+                   [series]="radarChartOptions.series"
+                   [chart]="radarChartOptions.chart"
+                   [xaxis]="radarChartOptions.xaxis"
+                   [stroke]="radarChartOptions.stroke"
+                   [colors]="radarChartOptions.colors"
+                   [dataLabels]="radarChartOptions.dataLabels"
+                   [tooltip]="radarChartOptions.tooltip"
+                   [plotOptions]="radarChartOptions.plotOptions"
+                   [markers]="radarChartOptions.markers"
+                   [yaxis]="radarChartOptions.yaxis"
+                   [fill]="radarChartOptions.fill"
+                   [legend]="radarChartOptions.legend"
+                 ></apx-chart>
+    
+          </div>
+        </div>
+      </div>
+      </div>
+  
