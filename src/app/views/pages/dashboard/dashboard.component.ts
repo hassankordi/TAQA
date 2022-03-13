@@ -59,8 +59,8 @@ export class DashboardComponent implements OnInit {
    * NgbDatepicker
    */
   currentDate: NgbDateStruct;
-  barChartData  :any = []
-  data  :any = []
+  barChartData  :any = [];
+  data  :any = [];
   data2  :any = []
   data3  :any = []
   stationName  :any = []
